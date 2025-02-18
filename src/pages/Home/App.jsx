@@ -1,5 +1,6 @@
 import Hero from '../../components/Hero/Hero'
 import Movies from '../../components/Movies/Movies'
+import People from '../../components/People/People'
 import Trending from '../../components/Trending/Trending'
 import MainLayouts from '../../Layouts/MainLayouts'
 import './App.css'
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Trending />
         <Movies />
+        <People />
       </MainLayouts>
     </div>
   )

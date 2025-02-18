@@ -1,21 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
-import { emojiCursor, rainbowCursor } from "cursor-effects";
 
-const MainLayouts = ({ children }) => {
-    new rainbowCursor({
-        length: 10,
-        colors: ["red", "white"],
-        size: 10,
-    });
+const ShowMoreLayouts = ({ children, types = "kosong harus di isi types movie / tv / trending" }) => {
     return (
         <div>
             <Navbar />
+            <marquee behavior="scroll" direction="">Pilihan {types} trending today</marquee>
             {children}
             <Footer />
         </div>
     )
 }
 
-export default MainLayouts
+export default ShowMoreLayouts

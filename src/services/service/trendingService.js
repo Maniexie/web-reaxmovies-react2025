@@ -18,3 +18,12 @@ export const getTrendingMovies = async () => {
     console.log(error);
   }
 };
+
+export const getTrendingPeople = async () => {
+  try {
+    const response = await axiosInstance.get(API_URL.getTrendingPeople);
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+};

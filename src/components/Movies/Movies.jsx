@@ -26,9 +26,9 @@ const Movies = () => {
                 <div className='flex overflow-x-auto'>
                     {movies.map(movie => (
                         <Link key={movie.id} to={`/detail-movie/${movie.id}`}>
-                            <div className="p-2">
-                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title} className="rounded-lg" />
-                                <h1 className="text-center mt-2 text-lg font-semibold">{movie.title}</h1>
+                            <div className="m-1 mx-2 border-2 rounded-tl-lg rounded-tr-lg border-gray-400">
+                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title} className="rounded-tl-lg rounded-tr-lg" />
+                                <h1 className=" bg-amber-700 py-1 text-center text-lg font-semibold">{movie.title}</h1>
                             </div>
                         </Link>
                     ))}

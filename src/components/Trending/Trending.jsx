@@ -13,7 +13,6 @@ const Trending = () => {
         const fetchData = async () => {
             try {
                 const response = await axiosInstance.get(API_URL.getTrendingAll);
-                console.log("fetchData :" + response.data.results)
                 setTrending(response.data.results.slice(0, 5))
             } catch (error) {
                 console.log(error)
@@ -35,7 +34,7 @@ const Trending = () => {
                     {trending.map((tren) => (
                         <Link key={tren.id} to={`/detail-movie/${tren.id}`}>
                             <div className="p-2">
-                                <img src={`https://image.tmdb.org/t/p/w500/${tren.backdrop_path}`} alt={tren.title} className="rounded-lg" />
+                                <img src={`https://image.tmdb.org/t/p/w500/${tren.backdrop_path}`} alt={tren.title} className="object-contain rounded-lg" />
                                 <h1 className="text-center mt-2 text-lg font-semibold">{tren.title || tren.name}</h1>
                             </div>
                         </Link>
