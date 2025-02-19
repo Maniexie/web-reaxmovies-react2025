@@ -10,9 +10,11 @@ function App() {
   return (
     <div className='min-h-screen'>
       <MainLayouts>
-        <Hero />
+        {/* <Hero /> */}
         <Trending />
+        <p className='py-1 mt-2 bg-amber-200' />
         <Movies />
+        <p className='py-1 mt-2 bg-amber-200' />
         <People />
       </MainLayouts>
     </div>

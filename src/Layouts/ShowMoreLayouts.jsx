@@ -6,7 +6,7 @@ const ShowMoreLayouts = ({ children, types = "kosong harus di isi types movie / 
     return (
         <div>
             <Navbar />
-            <marquee behavior="scroll" direction="">Pilihan {types} trending today</marquee>
+            <marquee behavior="scroll" direction="left">{types} choices that are trending today ({new Date().toDateString()})</marquee>
             {children}
             <Footer />
         </div>
