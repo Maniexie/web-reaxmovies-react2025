@@ -11,4 +11,7 @@ export const API_URL = {
 
   // trailer movie id
   getMovieTrailer: (id) => `/movie/${id}/videos?language=en-US`,
+
+  // /* detail people id */
+  getPeopleId: (id) => `/person/${id}?language=en-US`,
 };
