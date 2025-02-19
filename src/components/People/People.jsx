@@ -32,7 +32,7 @@ const People = () => {
                 </div>
                 <div className="flex overflow-x-auto">
                     {people.map((people) => (
-                        <Link key={people.id} to={`/detail-people/${people.id}`} block={true}>
+                        <Link key={people.id} to={`/detail/${people.id}`} block={true}>
                             <div className="m-1 mx-2 border-2 rounded-tl-lg rounded-tr-lg border-gray-400">
                                 <img src={people.profile_path ? `https://image.tmdb.org/t/p/w500/${people.profile_path}` : NullPNG}
                                     alt={people.name} className=" rounded-tl-lg rounded-tr-lg " />

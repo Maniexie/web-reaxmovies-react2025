@@ -7,6 +7,7 @@ import DetailMovie from "./pages/DetailMovie/DetailMovie";
 import ShowMoreMovie from "./pages/ShowMoreMovie/ShowMoreMovie";
 import ShowMoreTrending from "./pages/ShowMoreTrending/ShowMoreTrending";
 import ShowMorePeople from "./pages/ShowMorePeople/ShowMorePeople";
+import DetailCard from "./pages/DetailCard/DetailCard";
 
 
 const root = document.getElementById("root");
@@ -19,6 +20,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/show-more-movie" element={<ShowMoreMovie />} />
       <Route path="/show-more-trending" element={<ShowMoreTrending />} />
       <Route path="/show-more-people" element={<ShowMorePeople />} />
+      <Route path="/detail/:id" element={<DetailCard />} />
     </Routes>
   </BrowserRouter>
 );
