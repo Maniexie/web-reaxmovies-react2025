@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";  // import dari react-router-dom
+import { BrowserRouter, Routes, Route } from "react-router";
 import './index.css'
 import App from './pages/Home/App'
 import DetailMovie from "./pages/DetailMovie/DetailMovie";
@@ -10,10 +10,11 @@ import ShowMorePeople from "./pages/ShowMorePeople/ShowMorePeople";
 import DetailCard from "./pages/DetailCard/DetailCard";
 import DetailPeople from "./pages/DetailPeople/DetailPeople";
 
+
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter basename="/web-reaxmovies-react2025">  {/* Tambahkan basename */}
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} index />
       <Route path="/detail-movie/:id" element={<DetailMovie />} />
