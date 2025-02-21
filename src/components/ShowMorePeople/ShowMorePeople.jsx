@@ -23,7 +23,7 @@ const ShowMorePeople = () => {
             <ul className='grid grid-cols-4 gap-2'>
                 {people.map((people) => (
                     <li key={people.id} className='bg-gray-800 p-4 rounded'>
-                        <Link to={`/detail-people/${people.id}`}>
+                        <Link to={`/detail-people/${people.id}`} target='_blank'>
                             <img src={people.profile_path ? `https://image.tmdb.org/t/p/w500/${people.profile_path}` : NullPNG} alt={people.name} className="object-cover w-full h-64 rounded-t-lg" />
                             <h1 className="text-center mt-2 text-lg text-indigo-50 font-semibold">{people.name}</h1>
                         </Link>

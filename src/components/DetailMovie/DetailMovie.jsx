@@ -41,7 +41,7 @@ const DetailMovie = () => {
         fetchData();
     }, [id]);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className='flex justify-center items-center animate-spin'>Loading...</p>;
     if (!movie) return <p>Movie not found</p>;
 
     const posterUrl = movie.poster_path

@@ -26,17 +26,17 @@ const People = () => {
             <div className="flex flex-col items-stretch">
                 <div className="flex justify-between mx-4">
                     <h1 className='text-2xl font-extrabold'>People</h1>
-                    <Link to="/show-more-people" className='mt-2 text-md hover:underline flex items-center'>
+                    <Link to="/show-more-people" className='mt-2 text-md hover:underline underline-offset-4 flex items-center'>
                         <span className='text-lg'> {"Show More"}</span> <span className='mt-0.5 text-xl'><MdKeyboardDoubleArrowRight /></span>
                     </Link>
                 </div>
                 <div className="flex overflow-x-auto">
                     {people.map((people) => (
-                        <Link key={people.id} to={`/detail-people/${people.id}`} block={true}>
+                        <Link key={people.id} to={`/detail-people/${people.id}`} block={true} target='_blank'>
                             <div className="m-1 mx-2 border-2 rounded-tl-lg rounded-tr-lg border-gray-400">
                                 <img src={people.profile_path ? `https://image.tmdb.org/t/p/w500/${people.profile_path}` : NullPNG}
                                     alt={people.name} className=" rounded-tl-lg rounded-tr-lg " />
-                                <h1 className=" bg-amber-700 py-1 text-center text-lg font-semibold">{people.name}</h1>
+                                <h1 className=" bg-amber-700 py-1 text-center text-lg font-semibold text-white hover:bg-amber-500 in-hover:active:bg-amber-300">{people.name}</h1>
                             </div>
                         </Link>
                     ))}

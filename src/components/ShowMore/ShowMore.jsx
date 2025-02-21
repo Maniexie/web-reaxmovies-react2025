@@ -22,7 +22,7 @@ const ShowMore = () => {
             <ul className='grid grid-cols-5 gap-4 p-0.5'>
                 {film.map((film) => (
                     <li key={film.id} className='bg-gray-800 p-4 rounded'>
-                        <Link to={`/detail-movie/${film.id}`}>
+                        <Link to={`/detail-movie/${film.id}`} target='_blank'>
                             <img src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`} alt={film.title || film.name} className='w-full h-auto' />
                             <h1 className='text-center mt-2 text-lg text-indigo-50 font-semibold'>{film.title || film.name}</h1>
                         </Link>
