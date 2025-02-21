@@ -1,8 +1,41 @@
-# React + Vite
+# Project Movie TMDB API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Demo Live : https://maniexie.github.io/web-reaxmovies-react2025
 
-Currently, two official plugins are available:
+#
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How To Clone Project
+
+1. paste link to terminal
+
+```bash
+    git clone https://github.com/Maniexie/web-reaxmovies-react2025.git
+```
+
+2. change directory or enter to directory web-reaxmovies-react2025
+
+```bash
+    cd web-reaxmovies-react2025
+```
+
+3. copy env
+
+```bash
+    cp .env.example
+```
+
+4. run project
+
+```bash
+    npm run dev
+```
+
+#
+
+# Environment
+
+.env
+
+```bash
+VITE_APP_TMDB_API_KEY=
+```
