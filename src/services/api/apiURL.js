@@ -14,4 +14,10 @@ export const API_URL = {
 
   // /* detail people id */
   getPeopleId: (id) => `/person/${id}?language=en-US`,
+
+  //search movie
+  searchMovie: (searchQuery) =>
+    `/search/movie?api_key=${
+      import.meta.env.VITE_APP_TMDB_API_KEY
+    }&query=${searchQuery}`,
 };
