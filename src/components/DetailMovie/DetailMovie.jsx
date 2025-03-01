@@ -10,6 +10,7 @@ const DetailMovie = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        console.log("Fetching details for movie ID:", id);
         const fetchData = async () => {
             try {
                 const response = await axiosInstance.get(API_URL.getMovieId(id), {
@@ -30,7 +31,11 @@ const DetailMovie = () => {
                     setTrailer(null);
                 }
 
-                setMovie(response.data);
+                if (response.data) {
+                    setMovie(response.data);
+                } else {
+                    console.log("Error fetching movie details:", error);
+                }
                 setLoading(false);
             } catch (error) {
                 console.log(error);

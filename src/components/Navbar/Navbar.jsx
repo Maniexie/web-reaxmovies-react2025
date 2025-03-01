@@ -73,6 +73,7 @@ const Navbar = ({ onSearch }) => {
                                                 <Link
                                                     to={`/detail-movie/${movie.id}`}
                                                     className="block flex-1 px-4 text-left"
+                                                    target='_blank'
                                                 >
                                                     <span className="font-semibold">{movie.title}</span>
                                                 </Link>
