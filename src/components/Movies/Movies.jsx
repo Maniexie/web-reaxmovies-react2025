@@ -10,7 +10,7 @@ const Movies = () => {
         const fetchData = async () => {
             try {
                 const response = await axiosInstance.get(API_URL.getTrendingMovies);
-                setMovies(response.data.results.slice(0, 5));
+                setMovies(response.data.results.slice(0, 4));
             } catch (error) {
                 console.log(error)
             }
@@ -26,12 +26,12 @@ const Movies = () => {
                         <span className='text-lg'> {"Show More"}</span> <span className='mt-0.5 text-xl'><MdKeyboardDoubleArrowRight /></span>
                     </Link>
                 </div>
-                <div className='flex overflow-x-auto'>
+                <div className="grid grid-cols-4 max-md:grid-cols-2 gap-2 overflow-x-auto mx-1">
                     {movies.map(movie => (
                         <Link key={movie.id} to={`/detail-movie/${movie.id}`} target='_blank'>
-                            <div className="m-1 mx-2 border-2 rounded-tl-lg rounded-tr-lg border-gray-400">
-                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title} className="rounded-tl-lg rounded-tr-lg" />
-                                <h1 className=" bg-amber-700 py-1 text-center text-lg font-semibold text-white hover:bg-amber-500 in-hover:active:bg-amber-300">{movie.title}</h1>
+                            <div className="p-2 bg-gray-800 rounded-lg">
+                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title} className="w-full h-48 object-cover rounded-tl-lg rounded-tr-lg" />
+                                <h1 className="text-balance bg-amber-700 py-1 text-center text-lg font-semibold text-white hover:bg-amber-500 in-hover:active:bg-amber-300">{movie.title}</h1>
                             </div>
                         </Link>
                     ))}

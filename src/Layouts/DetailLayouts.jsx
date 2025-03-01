@@ -7,7 +7,9 @@ const DetailLayouts = ({ children }) => {
         <div>
             <Navbar />
             {children}
-            <Footer />
+            <div className="bottom-0 w-full bg-amber-500">
+                <Footer />
+            </div>
         </div>
     )
 }

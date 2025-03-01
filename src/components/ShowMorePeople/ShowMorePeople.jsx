@@ -20,7 +20,7 @@ const ShowMorePeople = () => {
     }, [])
     return (
         <div>
-            <ul className='grid grid-cols-4 gap-2'>
+            <ul className='grid grid-cols-4 max-md:grid-cols-2 gap-4 p-0.5'>
                 {people.map((people) => (
                     <li key={people.id} className='bg-gray-800 p-4 rounded'>
                         <Link to={`/detail-people/${people.id}`} target='_blank'>
