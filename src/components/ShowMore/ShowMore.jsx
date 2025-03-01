@@ -19,7 +19,7 @@ const ShowMore = () => {
 
     return (
         <div>
-            <ul className='grid grid-cols-5 gap-4 p-0.5'>
+            <ul className='grid grid-cols-4 max-md:grid-cols-2 gap-4 p-0.5'>
                 {film.map((film) => (
                     <li key={film.id} className='bg-gray-800 p-4 rounded'>
                         <Link to={`/detail-movie/${film.id}`} target='_blank'>

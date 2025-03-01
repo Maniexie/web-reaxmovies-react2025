@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { API_URL } from '../../services/api/apiURL';
 import { axiosInstance } from '../../services/api/axiosInstance';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 const DetailMovie = () => {
     const { id } = useParams();
@@ -47,7 +50,7 @@ const DetailMovie = () => {
     }, [id]);
 
     if (loading) return <p className='flex justify-center items-center animate-spin'>Loading...</p>;
-    if (!movie) return <p>Movie not found</p>;
+    if (!movie) return <p className='flex justify-center items-center h-screen'>Movie not found</p>;
 
     const posterUrl = movie.poster_path
         ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
@@ -56,7 +59,7 @@ const DetailMovie = () => {
     const trailerUrl = trailer ? `https://www.youtube.com/embed/${trailer.key}` : null;
 
     return (
-        <div className="bg-gray-100">
+        <div className="">
             <div className="flex gap-5">
                 {/* Bagian Trailer */}
                 <div className="p-5">
@@ -88,7 +91,7 @@ const DetailMovie = () => {
                 </div>
             </div>
             <p className='bg-amber-400 text-amber-400 mt-2'>===</p>
-            <div className="p-5 flex flex-col">
+            <div className="p-5 flex flex-col bg-gray-300 h-121">
                 <h2 className="text-3xl font-bold">{movie.title}</h2>
                 <p className="mt-2 text-lg"><strong>Release Date:</strong> {movie.release_date}</p>
                 {/* <p className="mt-2 text-lg"><strong>Rating:</strong> {movie.vote_average}</p> */}
